@@ -1,0 +1,7 @@
+# Normalise line endings to LF in the repository and on checkout.
+#
+# The script writes LF output, and the regression step diffs that output
+# byte-for-byte against samples/. With core.autocrlf=true and no rule here, a
+# fresh Windows checkout would turn the stored samples into CRLF and the diff
+# would fail on every line.
+* text=auto eol=lf
